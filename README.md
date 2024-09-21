@@ -309,3 +309,8 @@ distribution, please see:
 
  * http://www.freertos.org/FreeRTOS-quick-start-guide.html
  * http://www.freertos.org/FAQHelp.html
+   
+Error resolve
+-------------
+sudo apt-get install libxen-dev
+
