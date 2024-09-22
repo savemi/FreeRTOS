@@ -1,0 +1,35 @@
+10d9
+< 
+12a12,14
+> char *mstrrchr(const char *str, int character);
+> char *mstrcpy(char *dest, const char *src);
+> 
+302a305,328
+> char *mstrcpy(char *dest, const char *src) {
+>     char *original_dest = dest;  
+> 
+>     while ((*dest++ = *src++) != '\0') {
+>         ; 
+>     }
+> 
+>     return original_dest;  
+> }
+> 
+> char *mstrrchr(const char *str, int character) {
+>     char *last_occurrence=NULL;  
+>     
+>     while (*str != '\0') {
+>         
+>         if (*str == character) {
+> 	   mstrcpy(last_occurrence, str); 
+>             //last_occurrence = str;  
+>         }
+>         str++;  
+>     }
+>     return (char *)last_occurrence;
+> }
+> 
+322c348
+< 		leaf = strrchr(nameptr, '/');
+---
+> 		leaf = mstrrchr(nameptr, '/');

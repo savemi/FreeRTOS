@@ -313,4 +313,5 @@ distribution, please see:
 Error resolve
 -------------
 sudo apt-get install libxen-dev
-
+toolchain -> arm-linux-gnueabi-gcc
+apply *.patch
